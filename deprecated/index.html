@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div include-html="sidebar.html"></div>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Postdocs Activos -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary-1 shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Postdocs activos</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink" style="min-width: 600px;">
+                                            <div class="dropdown-header">Lista de investigadores:</div>
+
+                                            <div class="dropdown-table"
+                                                style="max-height: 300px; overflow-y: auto; overflow-x: auto; padding: 10px;">
+                                                <table style="width: 100%; border-collapse: collapse;" border="1"
+                                                    cellspacing="0" cellpadding="5">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nombre</th>
+                                                            <th>ORCID</th>
+                                                            <th>Investigador responsable CIAD</th>
+                                                            <th>Coordinación</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Julia Mar&iacute;a Torres Verde</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Alejandra Garc&iacute;a Gasca</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sergio Gerardo Hernandez Leon</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Al&iacute; Jes&uacute;s Asaff Torres (cambio asesor
+                                                                |Anterior: Elisa Miriam Valenzuela Soto)</td>
+                                                            <td>Ciencia de los Alimentos</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aimee Cervantes Escobar</td>
+                                                            <td>0000-0001-8802-2367</td>
+                                                            <td>Arturo Ruiz Luna</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Abril Montijo Galindo</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Arturo Ruiz Luna</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Juanita Fonseca Parra</td>
+                                                            <td>0000-0002-1626-6829</td>
+                                                            <td>Arturo Ruiz Luna</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jose Isidro Mendez Romero</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Belinda Vallejo Galland</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lilia Maria Beltran Barrientos</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Belinda Vallejo Galland</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Victoria Araiza Gomez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Bruno Gom&eacute;z Gil Rodr&iacute;guez Sala</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Erick Josue Navarro Barron</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Bruno Gom&eacute;z Gil Rodr&iacute;guez Sala</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Alexis Lamz Piedra</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Carlos Horacio Acota Mu&ntilde;&iacute;z</td>
+                                                            <td>Cuauht&eacute;moc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mayra Cristina Garcia Anaya</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Carlos Horacio Acota Mu&ntilde;&iacute;z</td>
+                                                            <td>Cuauht&eacute;moc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Daniel Alonso Perez Corral</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Claudio R&iacute;os Velasco</td>
+                                                            <td>Cuauht&eacute;moc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Juan Daniel Lira Morales</td>
+                                                            <td>0000-0002-7558-3963</td>
+                                                            <td>Crist&oacute;bal Chaidez Quiroz</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jean Pierre Gonzalez Gomez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Crist&oacute;bal Chaidez Quiroz</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jes&uacute;s Cristian Amaro Hern&aacute;ndez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>David Roberto Sep&uacute;lveda Ahumada</td>
+                                                            <td>Cuauht&eacute;moc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adrian Ponce de Leon Door</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>David Roberto Sep&uacute;lveda Ahumada</td>
+                                                            <td>Cuauht&eacute;moc</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Martha Alejandra Flores Cuamea</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Diana Mar&iacute;a Perfecta Luque Agraz</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>David Armando Encinas Basurto</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Elizabeth Carvajal Mill&aacute;n</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Maria Montserrat Cruz Benitez</td>
+                                                            <td>0000-0002-6915-5508</td>
+                                                            <td>Eneas Aguirre Von Wobeser</td>
+                                                            <td>Hidalgo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Marilyn Shomara Criollo Mendoza</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Erick Paul Guti&eacute;rrez Grijalva</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Laura Patricia Silva Ledezma</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Francisco Javier Mart&iacute;nez Cordero</td>
+                                                            <td>Mazatl&aacute;n (error en el registro de CONAHCYT: dice
+                                                                Cuauht&eacute;moc; deber&iacute;a decir:
+                                                                Mazatl&aacute;n).</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Juan Carlos Rene Dorantes de la O</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Gerardo Torres Garc&iacute;a</td>
+                                                            <td>Nayarit</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Indira Yarely Lopez Cortes</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Gerardo Torres Garc&iacute;a</td>
+                                                            <td>Nayarit</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Laura Camacho Jimenez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Gloria Martina Yepiz Plascencia</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Alejandra Montserrat Preciado Salda&ntilde;a</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Gustavo Adolfo Gonz&aacute;lez Aguilar</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cesar Gioberti Catalan Dibene</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Isabel Cristina Taddei Bringas</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Karla Teran Samaniego</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Jes&uacute;s Mart&iacute;n Robles Parra</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mayra Lucia Maycotte de la Pe&ntilde;a</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Jes&uacute;s Mart&iacute;n Robles Parra</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Luis Angel Cabanillas Bojorquez</td>
+                                                            <td>0000-0002-8943-2891</td>
+                                                            <td>Jos&eacute; Basilio Heredia</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Nayely Leyva Lopez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Jos&eacute; Basilio Heredia</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jose Fernando Mendez Gonzalez</td>
+                                                            <td>0000-0002-1549-7123</td>
+                                                            <td>Jos&eacute; Juan Buenrostro Figueroa</td>
+                                                            <td>Delicias</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Maria Belia Contreras Soto</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Juan Manuel Tovar Pedraza</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lucila del Carmen Armenta Mendez</td>
+                                                            <td>0000-0002-0651-3638</td>
+                                                            <td>Juan Pablo Gallo Reynoso</td>
+                                                            <td>Guaymas</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adriana Estefania Flores Moran</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Juan Pablo Gallo Reynoso</td>
+                                                            <td>Guaymas</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>G&eacute;nesis Vidal Buitimea Cant&uacute;a</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Luis Quihui Cota</td>
+                                                            <td>Nutrici&oacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amed Gallegos Tabanico</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Luz V&aacute;zquez Moreno</td>
+                                                            <td>Ciencia de los Alimentos</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mitzuko Dautt Castro</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mar&iacute;a Auxiliadora Islas Osuna</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Miguel &Aacute;ngel Rend&oacute;n Rosales</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mar&iacute;a de Jes&uacute;s Torres Llanez</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jeny Hinojosa Gomez</td>
+                                                            <td>0000-0002-1866-0408</td>
+                                                            <td>Mar&iacute;a Dolores Muy Rangel</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Isabel Valles Vega</td>
+                                                            <td>0000-0003-2525-3410</td>
+                                                            <td>Mar&iacute;a Isabel Abdo de la Parra (cambio asesor |
+                                                                Anterior: Emma Josefina Fajer &Aacute;vila)</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cecilia Acu&ntilde;a Kaldman</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Martha Olivia Pe&ntilde;a Ramos</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jesus Alberto Jimenez Leyva</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mart&iacute;n Candelario Esqueda Valle</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Juan Pedro Ortiz Sanchez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mart&iacute;n Enrique Jara Mar&iacute;n</td>
+                                                            <td>Ciencia de los Alimentos</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Heriberto Garcia Coronado</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mart&iacute;n Ernesto Tiznado Hern&aacute;ndez</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jos&eacute; Luis D&aacute;vila R&aacute;mirez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mart&iacute;n Valenzuela Melendres</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mario Sanchez Sanchez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Miguel &Aacute;ngel Mart&iacute;nez T&eacute;llez</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cristobal Joel Gonzalez Perez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Miguel &Aacute;ngel Mart&iacute;nez T&eacute;llez</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Citlali Colin Chavez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Miguel &Aacute;ngel Mart&iacute;nez T&eacute;llez</td>
+                                                            <td>TAOV-CIDAM</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Karla Denisse Luna Avelar</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Miguel Betancourt Lozano</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Samuel Calderon Lievanos</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Miguel Betancourt Lozano</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Irvin Gonzalez Lopez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Nohelia Castro del Campo</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jose Roberto Aguirre Sanchez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Nohelia Castro del Campo</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Edwin Rojo Gutierrez</td>
+                                                            <td>0000-0002-3921-3527</td>
+                                                            <td>Ramiro Baeza Jim&eacute;nez</td>
+                                                            <td>Delicias</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Maria del Rosario Baray Guerrero</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Ramiro Baeza Jim&eacute;nez</td>
+                                                            <td>Delicias</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Daniela Denisse Castro Enriquez</td>
+                                                            <td>0000-0002-8576-5250</td>
+                                                            <td>Rene Renato Balandran Quintana</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elena Noheli Moreno Cordova</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Rogerio Rafael Sotelo Mundo</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Julia Mar&iacute;a Torres Velarde</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Silvia Alejandra Garc&iacute;a Gasca</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Itzel Yanira Lopez Pe&ntilde;a</td>
+                                                            <td>0000-0003-2592-9804</td>
+                                                            <td>Tom&aacute;s Jes&uacute;s Madera Santana</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Diana Irais Cuamea Pi&ntilde;a</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mario Camberos Castro</td>
+                                                            <td>Desarrollo Regional</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cinthya Araceli Ruiz Pardo</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Waldo Arg&uuml;elles Monal</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Nina Gisella Heredia Sandoval</td>
+                                                            <td>0000-0002-8339-9082</td>
+                                                            <td>Alma Rosa Islas Rubio</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Carolina Guadalupe Delgado &Aacute;lvarez</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>David Ulises Santos Ballardo</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Omar Anaya Reza</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>Mayra de la Torre Mart&iacute;nez</td>
+                                                            <td>Hidalgo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Perla Marysol Uriarte Aceves</td>
+                                                            <td>0000-0001-9090-6540</td>
+                                                            <td>Miguel &Aacute;ngel &Aacute;ngulo Escalante</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">58</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Investigadores por México -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Investigadores por México</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink" style="min-width: 600px;">
+                                            <div class="dropdown-header">Lista de investigadores:</div>
+
+                                            <div class="dropdown-table"
+                                                style="max-height: 300px; overflow-y: auto; overflow-x: auto; padding: 10px;">
+                                                <table style="width: 100%; border-collapse: collapse;" border="1"
+                                                    cellspacing="0" cellpadding="5">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nombre</th>
+                                                            <th>Especialidad</th>
+                                                            <th>Unidad</th>
+                                                            <th>Coordinación</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Hern&aacute;ndez O&ntilde;ate Miguel &Aacute;ngel</td>
+                                                            <td>Plantas y microorganismos del desierto como fuente de
+                                                                conocimiento y recursos para mitigar el estr&eacute;s
+                                                                abi&oacute;tico</td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medrano F&eacute;lix Jos&eacute; Andr&eacute;s</td>
+                                                            <td>Capacidades fisiol&oacute;gicas de enterobacterias
+                                                                pat&oacute;genas para asegurar la inocuidad alimentos
+                                                            </td>
+                                                            <td>Culiac&aacute;n</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aguirre von Webeser Eneas</td>
+                                                            <td>Interacciones en el microbioma de milpa:
+                                                                composici&oacute;n, comunicaci&oacute;n y
+                                                                din&aacute;mica</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cabrera Ruiz Rosina</td>
+                                                            <td>Interacciones en el microbioma de milpa:
+                                                                composici&oacute;n, comunicaci&oacute;n y
+                                                                din&aacute;mica</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Vargas Ortiz Manuel Alejandro</td>
+                                                            <td>Frutos tropicales como fuente de fenoles y fibra,
+                                                                interacciones moleculares en digesti&oacute;n simulada
+                                                            </td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOA (antes Culiac&aacute;n en ADESUR)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Quintana Obreg&oacute;n Eber Add&iacute;</td>
+                                                            <td>Interacciones moleculares de fenoles y fibra y
+                                                                biodisponibilidad durante la digesti&oacute;n in vitro
+                                                            </td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOV (antes Culiac&aacute;n en ADESUR)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Virgen Ortiz Jos&eacute; Juan</td>
+                                                            <td>Aplicaciones biotecnol&oacute;gicas para la
+                                                                preservaci&oacute;n poscosecha y aprovechamiento
+                                                                sostenible de
+                                                                alimentos de origen vegetal</td>
+                                                            <td>CIDAM</td>
+                                                            <td>CIDAM</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Villica&ntilde;a Torres Mar&iacute;a Claudia</td>
+                                                            <td>Gen&oacute;mica funcional de organismos de importancia
+                                                                agroalimentaria para M&eacute;xico</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>L&oacute;pez Mart&iacute;nez Leticia Xochitl</td>
+                                                            <td>Fenoles y fibra de frutos tropicales. Interacciones y
+                                                                biodisponibilidad en digestiones in vitro</td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gonzalez Mendoza Victor Manuel</td>
+                                                            <td>Estudio de la funci&oacute;n de los microorganismos
+                                                                end&oacute;fitos y del suelo en el desarrollo de las
+                                                                plantas
+                                                                de ma&iacute;z, y en la aclimataci&oacute;n al
+                                                                estr&eacute;s abi&oacute;tico y bi&oacute;tico</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dominguez Avila Jesus Abraham</td>
+                                                            <td>Acci&oacute;n de compuestos fen&oacute;licos en el eje
+                                                                cerebro-intestino: Un acercamiento metab&oacute;lico
+                                                            </td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOV</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Vargas Sanchez Rey David</td>
+                                                            <td>Obtenci&oacute;n y uso de antioxidantes de subproductos
+                                                                agroindustriales fermentados con hongos comestibles</td>
+                                                            <td>Hermosillo</td>
+                                                            <td>TAOA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gutierrez Grijalva Erick Paul</td>
+                                                            <td>Fortalecimiento del grupo de investigaci&oacute;n del
+                                                                potencial nutrac&eacute;utico de plantas medicinales
+                                                            </td>
+                                                            <td>Culiac&aacute;n</td>
+                                                            <td>Culiac&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&Aacute;valos Soriano Anaguiven</td>
+                                                            <td>Fortalecimiento del programa de cultivo de peces marinos
+                                                                de CIAD Mazatl&aacute;n</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Guerrero Ru&iacute;z Carlos Abraham</td>
+                                                            <td>Ecogen&oacute;mica: Integraci&oacute;n de ciencias
+                                                                gen&oacute;micas a los estudios de sistemas
+                                                                acu&aacute;ticos
+                                                            </td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                            <td>Mazatl&aacute;n</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Garc&iacute;a Salazar Edith Miriam</td>
+                                                            <td>Gesti&oacute;n socioambiental del agua en comunidades
+                                                                rurales del estado de Hidalgo</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                            <td>CA (UR Hildago)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Anzurez Valencia Edgar</td>
+                                                            <td>Dise&ntilde;o y gesti&oacute;n de un plan
+                                                                estrat&eacute;gico de rehabilitaci&oacute;n y
+                                                                restauraci&oacute;n de
+                                                                ecosistemas fluviales y riparios contaminados por
+                                                                agentes agrot&oacute;xicos en el Estado de Colima,
+                                                                M&eacute;xico, con enfoque sist&eacute;mico,
+                                                                participativo y transdisciplinario</td>
+                                                            <td>CEIBAAS</td>
+                                                            <td>CEIBAAS</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gonzalez Robles Maura</td>
+                                                            <td>An&aacute;lisis de los factores ecosist&eacute;micos que
+                                                                influyen en la disponibilidad del agua en el estado de
+                                                                Colima y propuestas para un uso eficiente del agua en
+                                                                los principales sectores agroalimentarios</td>
+                                                            <td>CEIBAAS</td>
+                                                            <td>CEIBAAS</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Cards -->
+
+                    <div class="row">
+
+                        <!-- Solicitudes de información y transparencia -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary-2 shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Solicitudes de información y
+                                        transparencia</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink" style="min-width: 600px;">
+                                            <div class="dropdown-header">Folios de solicitudes:</div>
+                                            <div class="dropdown-table"
+                                                style="max-height: 300px; overflow-y: auto; overflow-x: auto; padding: 10px;">
+                                                <table style="width: 100%; border-collapse: collapse;" border="1"
+                                                    cellspacing="0" cellpadding="5">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Folio</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                330004125000004
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                330004125000056
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                330004125000058
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                330004125000060
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                ASF AECF-1099-2025
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                INEGI
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <!-- Conversatorios, charlas y CienCIAD -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary-3 shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><a href="Pagmezquite.php">Charlas bajo
+                                            el Mezquite</a></h6>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary-3 shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><a href="PagASAD.php">Conversatorios
+                                            ASAD 2025</a></h6>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary-3 shadow h-100 py-2">
+
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><a href="PagCienCIAD.php">CienCIAD
+                                            2025</a></h6>
+                                </div>
+
+
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">16</div>
+                                        </div>
+                                        <div class="col-auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Pie Chart Total -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Porcentaje para llegar a la meta
+                                        institucional del indicador 1.1 (2.5 productos por persona)
+                                    </h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="pieChartTotal"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle" style="color:#36b9cc"></i> Progreso
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Project Card Example -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="mb-1 card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Metas institucionales</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Proyectos cerrados en 2025<span
+                                            class="float-right">0%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Color System -->
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            Primary
+                                            <div class="text-white-50 small">#4e73df</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body">
+                                            Success
+                                            <div class="text-white-50 small">#1cc88a</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                        <div class="card-body">
+                                            Info
+                                            <div class="text-white-50 small">#36b9cc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-warning text-white shadow">
+                                        <div class="card-body">
+                                            Warning
+                                            <div class="text-white-50 small">#f6c23e</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-danger text-white shadow">
+                                        <div class="card-body">
+                                            Danger
+                                            <div class="text-white-50 small">#e74a3b</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-secondary text-white shadow">
+                                        <div class="card-body">
+                                            Secondary
+                                            <div class="text-white-50 small">#858796</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-light text-black shadow">
+                                        <div class="card-body">
+                                            Light
+                                            <div class="text-black-50 small">#f8f9fc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-dark text-white shadow">
+                                        <div class="card-body">
+                                            Dark
+                                            <div class="text-white-50 small">#5a5c69</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <div include-html="footer.html"></div>
+
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-pie-total.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- Include HTML -->
+    <script src="js/includeHtml.js"></script>
+    <script>includeHTML();</script>
+
+
+
+</body>
+
+</html>

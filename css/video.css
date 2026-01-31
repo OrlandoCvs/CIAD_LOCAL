@@ -1,0 +1,126 @@
+.video-block {
+    margin-bottom: 40px;
+}
+
+.video-block p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4e73df;
+    margin-bottom: 15px;
+}
+  
+@media (min-width: 992px) {
+   .video-section {
+  text-align: center;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+  .video-wrapper {
+    position: relative;
+    width: 560px;
+    height: 315px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper iframe:hover {
+    transform: scale(1.03);
+    border-color: #4e73df;
+    box-shadow: 0 12px 25px rgba(78, 115, 223, 0.4);
+}
+}
+@media (max-width: 991px) {
+    .video-section {
+  text-align: center;
+  margin-top: 40px;
+}
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-wrapper iframe:hover {
+    transform: scale(1.03);
+    border-color: #4e73df;
+    box-shadow: 0 12px 25px rgba(78, 115, 223, 0.4);
+  }
+}
+.video-title-bar {
+  background-color: #7B113A;
+  color: #fff;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 1.0rem;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+ 
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video-title-bar:hover {
+  background-color: #5a0d2e;
+  transform: translateY(-2px);
+}
+
+.input-narrow {
+    max-width: 350px; /* Aquí controlas qué tan ancho quieres que sean (300px a 400px es lo ideal) */
+    width: 100%;      /* Asegura que no se rompa en celulares */
+    margin-left: auto !important;  /* Esto asegura que se mantenga centrado */
+    margin-right: auto !important; /* Esto asegura que se mantenga centrado */
+    display: block;   /* Asegura comportamiento de bloque para el centrado */
+}
+
+
+@media (max-width: 575px) {
+  .video-title-bar {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    white-space: normal;
+    text-overflow: unset;
+    height: auto;
+    line-height: 1.4;
+  }
+  
+}

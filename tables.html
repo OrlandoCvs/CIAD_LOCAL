@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>STAR - Tables</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div include-html="sidebar.html"></div>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Personal de CIAD</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Categor&iacute;a</th>
+                                            <th>Coordinaci&oacute;n</th>
+                                            <th>Correo institucional</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Categor&iacute;a</th>
+                                            <th>Coordinaci&oacute;n</th>
+                                            <th>Correo institucional</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Nombre</td>
+                                            <td>Categor&iacute;a</td>
+                                            <td>Coordinaci&oacute;n</td>
+                                            <td>Correo institucional</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gardea Bejar Alfonso Antero</td>
+                                            <td>ITC</td>
+                                            <td>Guaymas</td>
+                                            <td>gardea@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Noriega Orozco Lorena Olivia</td>
+                                            <td>ITB</td>
+                                            <td>Guaymas</td>
+                                            <td>lnoriega@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gallo Reynoso Juan Pablo</td>
+                                            <td>ITC</td>
+                                            <td>Guaymas</td>
+                                            <td>JPGALLO@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Hernandez Jaqueline</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Guaymas</td>
+                                            <td>jaqueline@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arg&uuml;elles Monal Waldo Manuel</td>
+                                            <td>ITC</td>
+                                            <td>Guaymas</td>
+                                            <td>waldo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yepiz Plascencia Gloria Martina</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>gyepiz@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pacheco Aguilar Ramon</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>rpacheco@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pe&ntilde;a Ramos Etna Aida</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>aida@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sanchez Escalante Armida</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>ARMIDA-SANCHEZ@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gomez Jimenez Silvia</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>s.gomez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Torrescano Urrutia Gaston Ramon</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>gtorrescano@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vallejo Galland Belinda</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>vallejo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valenzuela Melendres Martin</td>
+                                            <td>ITA</td>
+                                            <td>CTAOA</td>
+                                            <td>martin@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vargas Albores Armando Francisco</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>FVALBORES@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mazorra Manzano Miguel Angel</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>mazorra@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gonzalez Rios Humberto</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>hugory@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carvajal Millan Elizabeth</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>ecarvajal@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lizardi Mendoza Jaime</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>jalim@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Orozco Karina Dalila</td>
+                                            <td>ITB</td>
+                                            <td>CTAOA</td>
+                                            <td>orozco@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ramirez Suarez Juan Carlos</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>JCRAMIREZ@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Muhlia Almazan Adriana Teresita</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>amuhlia@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lopez Franco Yolanda Leticia</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>lopezf@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Sifuentes Celia Olivia</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>SIFUENTES@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hernandez Mendoza Adrian</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>ahernandez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Martinez Porchas Marcel</td>
+                                            <td>ITC</td>
+                                            <td>CTAOA</td>
+                                            <td>marcel@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chavez Sanchez Maria Cristina</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>marcris@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ruiz Luna Arturo</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>arluna@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gomez Gil Rodriguez Sala Bruno</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>bruno@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Calvario Martinez Omar</td>
+                                            <td>ITB</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>ocalvario@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abdo De La Parra Maria Isabel</td>
+                                            <td>ITA</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>ABDO@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Almazan Rueda Pablo</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>almazan@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Berlanga Robles Cesar Alejandro</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>CESAR@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Morales Covarrubias Maria Soledad</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>marisol@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hernandez Gonzalez Crisantema</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>chdez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Gasca Silvia Alejandra</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>ALEGAR@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Betancourt Lozano Miguel</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>mbl@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Soto Rodriguez Sonia Araceli</td>
+                                            <td>ITC</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>ssoto@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Santos Ballardo David Ulises</td>
+                                            <td>ITB</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>ulises.ballardo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vazquez Moreno Luz</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>lvazquez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valenzuela Quintanar Ana Isabel</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>aquintanar@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rivera Dominguez Marisela</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>marisela@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jara Marini Martin Enrique</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>mjara@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Rico Leticia</td>
+                                            <td>ITB</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>lgarciar@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mata Haro Veronica</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>VMATA@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vargas Arispuro Irasema Del Carmen</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>iris@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ramos Clamont Montfort Gabriela</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>gramos@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>De La Torre Martinez Maria Mayra</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>mdelatorre@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Asaff Torres Ali Jesus</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>asaff@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Huerta Ocampo Jose Angel</td>
+                                            <td>ITC</td>
+                                            <td>Ciencia de los Alimentos</td>
+                                            <td>JOSE.HUERTA@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Islas Rubio Alma Rosa</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>aislas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Troncoso Rojas Rosalba</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>rtroncoso@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Soto Valdez Herlinda</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>hsoto@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Montoya Ballesteros Luz Del Carmen</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>lmontoya@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gonzalez Aguilar Gustavo Adolfo</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>gustavo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Martinez Tellez Miguel Angel</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>norawa@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Islas Osuna Maria Auxiliadora</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>islasosu@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Esqueda Valle Martin Candelario</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>esqueda@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mendoza Wilson Ana Maria</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>mwilson@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vasquez Lara Francisco</td>
+                                            <td>ITA</td>
+                                            <td>CTAOV</td>
+                                            <td>fvas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sanchez Estrada Alberto</td>
+                                            <td>ITA</td>
+                                            <td>CTAOV</td>
+                                            <td>aestrada@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiznado Hernandez Martin Ernesto</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>tiznado@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rascon Chu Agustin</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>arascon@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ayala Zavala Jesus Fernando</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>jayala@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balandran Quintana Rene Renato</td>
+                                            <td>ITC</td>
+                                            <td>CTAOV</td>
+                                            <td>rbalandran@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contreras Vergara Carmen Arminda</td>
+                                            <td>ITA</td>
+                                            <td>CTAOV</td>
+                                            <td>contreras@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Madera Santana Tomas Jesus</td>
+                                            <td>JDIV-ITB</td>
+                                            <td>CTAOV</td>
+                                            <td>madera@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wong Gonzalez Pablo</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>pwong@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camberos Castro Mario</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>mcamberos@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salido Araiza Patricia Lorenia</td>
+                                            <td>ITB</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>psalido@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salazar Solano Vidal</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>vidal@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Taddei Bringas Isabel Cristina</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>ctaddei@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Roman Perez Rosario</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>rroman@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leon Balderrama Jorge Ines</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>jleon@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Robles Parra Jesus Martin</td>
+                                            <td>ITA</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>jrobles@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cubillas Rodriguez Maria Jose</td>
+                                            <td>ITB</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>mjcubillas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hernandez Moreno Maria Del Carmen</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>mar@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Huesca Reynoso Luis</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>lhuesca@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Abril Valdez Elba Martina</td>
+                                            <td>ITB</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>abril@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pe&ntilde;a Ramos Martha Olivia</td>
+                                            <td>ITA</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>mpena@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Laborin Alvarez Jesus Francisco</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>laborin@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bracamontes Nevarez Joaquin</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>joaco@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Borbon Morales Carlos Gabriel</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>cborbon@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nu&ntilde;ez Noriega Guillermo</td>
+                                            <td>ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>gnunez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Luque Agraz Diana Maria Perfecta</td>
+                                            <td>ITB</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>dluque@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salazar Antunez Gilda</td>
+                                            <td>ITA</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>gisal@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Melendez Torres Juana Maria</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>jmelendez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garza Lagler Maria Cristina</td>
+                                            <td>ITA</td>
+                                            <td>Desarrollo Regional</td>
+                                            <td>maria.garza@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sotelo Mundo Rogerio Rafael</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Coordinaci&oacute;n de Investigaci&oacute;n</td>
+                                            <td>rrs@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grijalva Haro Maria Isabel</td>
+                                            <td>ITA</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>grijalva@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ballesteros Vasquez Martha Nydia</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>nydia@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ortega Velez Maria Isabel</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>iortega@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Calderon De La Barca Cota Ana Maria</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>amc@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quihui Cota Luis</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>lquihui@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pinelli Saavedra Araceli</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>pinelli@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Moya Camarena Silvia Yolanda</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>moyas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Esparza Romero Julian</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>julian@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mendez Estrada Rosa Olivia</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>romendez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hernandez Lopez Jesus</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>jhdez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aleman Mateo Heliodoro</td>
+                                            <td>ITC</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>helio@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Montalvo Corral Maricela</td>
+                                            <td>JDIV-ITB</td>
+                                            <td>Nutrici&oacute;n</td>
+                                            <td>MARICELA.MONTALVO@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camarena Gomez Beatriz Olivia</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Programas Acad&eacute;micos</td>
+                                            <td>betica@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gonzalez Cordova Aaron Fernando</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Vinculaci&oacute;n Social</td>
+                                            <td>aaronglz@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Del Valle Pignataro Gabriela</td>
+                                            <td>ITA</td>
+                                            <td>Vinculaci&oacute;n Social</td>
+                                            <td>gvp@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Torres Garcia Gerardo</td>
+                                            <td>JDIV-IAB</td>
+                                            <td>Direcci&oacute;n General</td>
+                                            <td>GERARDO.TORRES@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivas Orozco Guadalupe Isela</td>
+                                            <td>ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>golivas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sepulveda Ahumada David Roberto</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>dsepulveda@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ornelas Paz Jose De Jesus</td>
+                                            <td>ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>JORNELAS@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Acosta Mu&ntilde;iz Carlos Horacio</td>
+                                            <td>ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>cacosta@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zamudio Flores Paul Baruk</td>
+                                            <td>ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>pzamudio@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rios Velasco Claudio</td>
+                                            <td>ITC</td>
+                                            <td>Cuauhtemoc</td>
+                                            <td>CLAUDIO.RIOS@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Muy Rangel Maria Dolores</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>mdmuy@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garcia Estrada Raymundo Saul</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>rsgarcia@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Heredia . Jose Basilio</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>jbheredia@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sa&ntilde;udo Barajas Josefa Adriana</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>adriana@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carrillo Fasio Jose Armando</td>
+                                            <td>ITA</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>acarrillo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Angulo Escalante Miguel Angel</td>
+                                            <td>ITB</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>mangulo@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chaidez Quiroz Cristobal</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>chaqui@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valdez Torres Jose Benigno</td>
+                                            <td>ITA</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>JVALDEZ@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leon Felix Josefina</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>ljosefina@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Castro Del Campo Nohelia</td>
+                                            <td>ITB</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>ncastro@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lopez Cuevas Osvaldo</td>
+                                            <td>ITA</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>OSVALDO.LOPEZ@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tovar Pedraza Juan Manuel</td>
+                                            <td>ITC</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>JUAN.TOVAR@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sanchez Chavez Esteban</td>
+                                            <td>ITC</td>
+                                            <td>Delicias</td>
+                                            <td>esteban@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alvarado Gonzalez Sandra Monica</td>
+                                            <td>ITA</td>
+                                            <td>Delicias</td>
+                                            <td>salvarado@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chavez Mendoza Celia</td>
+                                            <td>ITA</td>
+                                            <td>Delicias</td>
+                                            <td>CELIA.CHAVEZ@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buenrostro Figueroa Jose Juan</td>
+                                            <td>ITB</td>
+                                            <td>Delicias</td>
+                                            <td>JOSE.BUENROSTRO@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Baeza Jimenez Ramiro</td>
+                                            <td>JDIV-ITC</td>
+                                            <td>Delicias</td>
+                                            <td>RAMIRO.BAEZA@CIAD.MX</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hern&aacute;ndez O&ntilde;ate Miguel &Aacute;ngel</td>
+                                            <td>IxM</td>
+                                            <td>TAOV</td>
+                                            <td>miguel.hernandez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medrano F&eacute;lix Jos&eacute; Andr&eacute;s</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>jose.medrano@ciad.edu.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aguirre von Webeser Eneas</td>
+                                            <td>IxM</td>
+                                            <td>CA (UR Hildago)</td>
+                                            <td>eneas.aguirre@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cabrera Ruiz Rosina</td>
+                                            <td>IxM</td>
+                                            <td>CA (UR Hildago)</td>
+                                            <td>rosina.cabrera@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vargas Ortiz Manuel Alejandro</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>CTAOA</td>
+                                            <td>manuel.vargas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quintana Obreg&oacute;n Eber Add&iacute;</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>CTAOV</td>
+                                            <td>eber.quintana@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Virgen Ortiz Jos&eacute; Juan</td>
+                                            <td>IxM</td>
+                                            <td>CIDAM</td>
+                                            <td>jose.virgen@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Villica&ntilde;a Torres Mar&iacute;a Claudia</td>
+                                            <td>IxM</td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>maria.villicana@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L&oacute;pez Mart&iacute;nez Leticia Xochitl</td>
+                                            <td>IxM</td>
+                                            <td>CTAOV</td>
+                                            <td>leticia.lopez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gonzalez Mendoza Victor Manuel</td>
+                                            <td>IxM</td>
+                                            <td>CA (UR Hildago)</td>
+                                            <td>victor.gonzalez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dominguez Avila Jesus Abraham</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>CTAOV</td>
+                                            <td>jesus.dominguez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vargas Sanchez Rey David</td>
+                                            <td>IxM</td>
+                                            <td>CTAOA</td>
+                                            <td>rey.vargas@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gutierrez Grijalva Erick Paul</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>Culiac&aacute;n</td>
+                                            <td>erick.gutierrez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&Aacute;valos Soriano Anaguiven</td>
+                                            <td>IxM</td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>anaguiven.avalos@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Guerrero Ru&iacute;z Carlos Abraham</td>
+                                            <td>IxM
+                                            </td>
+                                            <td>Mazatl&aacute;n</td>
+                                            <td>aguerrero@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garc&iacute;a Salazar Edith Miriam</td>
+                                            <td>IxM</td>
+                                            <td>CA (UR Hildago)</td>
+                                            <td>edith.garcia@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anzurez Valencia Edgar</td>
+                                            <td>IxM</td>
+                                            <td>CEIBAAS</td>
+                                            <td>edgar.anzurez@ciad.mx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gonzalez Robles Maura</td>
+                                            <td>IxM</td>
+                                            <td>CEIBAAS</td>
+                                            <td>maura.gonzalez@ciad.mx</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- Include HTML -->
+    <script src="js/includeHtml.js"></script>
+    <script>includeHTML();</script>
+
+</body>
+
+</html>
