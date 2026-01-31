@@ -23,8 +23,7 @@ try {
 
 
 } catch (\PDOException $e) {
-    // 5. Manejo de errores
-    // En producción, es mejor guardar el error en un log y no mostrarlo al usuario
+   
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 ?>
